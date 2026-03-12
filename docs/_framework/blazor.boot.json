@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "IronGarden.dll",
   "resources": {
-    "hash": "sha256-wDPfbC5vIWfmGxAKnoCfha8FhoBfVNQ7rSpDUESqhKo=",
+    "hash": "sha256-P72X3pDoPKBMoOJ22MMJDwgcO5slPpTwPLNkK3RJJzA=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-xHxGLFkXOKVWUJ7JbVOw7i8zT9gl1prEZVCvBfwTWaU="
     },
@@ -10,6 +10,9 @@
     },
     "wasmNative": {
       "dotnet.native.wasm": "sha256-cEPJi04T9AFo5gDhrnM8x4Vbk/JGW1xiFrQFBuk7iJc="
+    },
+    "wasmSymbols": {
+      "dotnet.native.js.symbols": "sha256-UZ0WJIwvf1T4fqKZTklznneV1JV50ugmtmKrMovO2So="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -21,7 +24,7 @@
       "System.Runtime.InteropServices.JavaScript.wasm": "sha256-xsZwmEIbNm3sbiJeqQJ88pHglvTAnywfi/4b7+I99ew="
     },
     "assembly": {
-      "IronGarden.wasm": "sha256-dpA0HzYWhG+Bie9QVd8KBKqddhQaD46ROajFK5KkFbM=",
+      "IronGarden.wasm": "sha256-zYxyRYPMyOfFR45M9LY4fDuwS7KckkpVCxfgrX9NRT4=",
       "Raylib-cs.wasm": "sha256-xIJcJDh4Q5+0ONe4di8oXvBTStjmdXww+2bxOSG4ATo="
     },
     "coreVfs": {

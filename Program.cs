@@ -6,7 +6,7 @@ using static Raylib_cs.Raylib;
 using System.Runtime.InteropServices.JavaScript;
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// CHLORO-PHOBIA  —  OVERHEAD 3D BUILDER EDITION
+// IRON GARDEN  —  OVERHEAD 3D BUILDER EDITION
 // Center Plant, Random Edge Source, 4 Enemy Factions, UI Icon Selection
 // ═══════════════════════════════════════════════════════════════════════════════
 public partial class Program
@@ -752,8 +752,8 @@ public partial class Program
 
     static void DrawTitle() {
         DrawRectangle(0,0,SCREEN_W,SCREEN_H, new Color(5,10,15,200));
-        DrawText("CHLORO-PHOBIA", 100, 200, 80, C_PLANT);
-        DrawText("I r o n  G a r d e n", 105, 290, 30, C_SOURCE);
+        DrawText("IRON GARDEN", 100, 200, 80, C_PLANT);
+        DrawText("A Mechanical Sentinel's Choice", 105, 290, 30, C_SOURCE);
         DrawText("> Click or Press [ENTER] to Deploy <", 100, 500, 24, TEXT_MAIN);
     }
     
