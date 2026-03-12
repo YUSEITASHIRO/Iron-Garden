@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IRON GARDEN</title>
+</head>
+
+<body
+    style="background:#05070a; color:white; margin:0; overflow:hidden; display:flex; justify-content:center; align-items:center; height:100vh;">
+    <div id="loading" style="font-family:monospace; font-size:1.5rem;">Init WASM Environment...</div>
+    <canvas id="canvas" tabindex="-1" style="display:none;"></canvas>
+
+    <script type="module">
+        import { dotnet } from './_framework/dotnet.js';
+
+        async function initGame() {
+            try {
+                const { getAssemblyExports, getConfig, runMain } = await dotnet
+                    .withDiagnosticTracing(false)
+                    .create();
+
+                const config = getConfig();
+                const exports = await getAssemblyExports(config.mainAssemblyName);
+
+                // .NET/Raylibのランタイムにキャンバスを紐付ける
+                dotnet.instance.Module['canvas'] = document.getElementById('canvas');
+
+                // Mainメソッドを実行（初期化）
+                await runMain();
+
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('canvas').style.display = 'block';
+
+                // JavaScript側から毎フレームC#のUpdateを呼び出すフック
+                function nextFrame() {
+                    exports.Program.Update();
+                    requestAnimationFrame(nextFrame);
+                }
+                nextFrame();
+            } catch (err) {
+                console.error(err);
+                document.getElementById('loading').innerText = "WASM Load Error: " + err;
+            }
+        }
+        initGame();
+    </script>
+</body>
+
+</html>
