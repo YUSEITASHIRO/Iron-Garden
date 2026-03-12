@@ -11,9 +11,6 @@
     "wasmNative": {
       "dotnet.native.wasm": "sha256-cEPJi04T9AFo5gDhrnM8x4Vbk/JGW1xiFrQFBuk7iJc="
     },
-    "wasmSymbols": {
-      "dotnet.native.js.symbols": "sha256-UZ0WJIwvf1T4fqKZTklznneV1JV50ugmtmKrMovO2So="
-    },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
       "icudt_EFIGS.dat": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc=",
